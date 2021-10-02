@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+           
+          box-sizing: border-box; 
+          margin: 0%; 
+        }
+        .mainHeader{
+         /* border: 1px solid black;*/
+          width: 100%;
+          background-color: white;
+           position: sticky; 
+         top: 0%;
+         z-index: 1;
+        }
+        .inner1{
+           /* border: 1px solid black;*/
+            width: 100%;
+            height: 40px;
+            padding: .5%;
+            border-bottom:1px solid #BDBDBD;
+        }
+        .span{
+         position: relative;
+         left: 80%;
+         color: #9E9E9E;
+         font-size: 13px;
+        }
+        .span:hover{
+        color: #E40B81;
+        }
+        .inner2{
+          /*  border: 1px solid black;*/
+            width: 100%;
+            height: 80px;
+            padding: .5%;
+            display: flex;
+            border-bottom:1px solid #BDBDBD;
+            align-items: center;
+        
+            
+        }
+        .inner2_1{
+            display: flex;
+        }
+        #search{
+           
+           /* border: 1px solid red; */
+            margin-left:12%;
+            display: flex;
+            height:40px;
+            margin-top: 20px;
+        }
+        #search_1{
+          outline: none;
+          border: white;
+        }
+        #search_2{
+          outline: none;
+          border: white;
+          
+        }
+        #purpleLogo{
+           width: 400px;
+           /* border: 1px solid red;*/
+            margin-left:50%;
+            display: flex;
+            align-items: center;
+        }
+        #img1{
+           /* border: 1px solid black;*/
+            width: 100px;
+        }
+        #img2{
+          /* border: 1px solid black;*/
+            width: 40px;
+            vertical-align: center;
+            
+        }
+        #symbol{
+            
+           /* border: 1px solid black;*/
+            display: flex;
+            margin-left:60%;
+        }
+        .sym{
+           font-size: 60px;
+           margin-right: 5%;
+           color: #9E9E9E;
+        }
+        #heart{
+            color:#BDBDBD;
+            text-decoration-line: none; 
+        }
+        #cart{
+          width: 50px;
+          height: 50px; 
+          font-size: 50px;
+          color:#BDBDBD;
+          background-color: white;
+          border: none;
+        }
+        .inner3{
+          /*  border: 1px solid black;*/
+            width: 100%;
+            height: 40px;
+            padding: .5%;
+            display: flex;
+            border-bottom:1px solid #BDBDBD;
+        }
+     .a{
+      width: 100%;
+     }
+     .inner3_1{
+       /*  border: 1px solid black;*/
+         margin-right: 3%;
+         font-weight: 700;
+     }
+     #inner3_1_1{
+         margin-left: 30%;
+     }
+     .inner3_1:hover{
+      color:#E40B81 ;
+      border-bottom: 2px solid #E40B81;
+     }
+        #navbar1{
+            height: 600px;
+           
+            margin:auto 50px;
+           
+        }
+        #imgSliding{
+            height: 600px;
+           margin-top: 300px;
+            margin:auto 50px;
+        }
+        .fixedImage{
+            margin:70px 50px;
+        }
+        #navbar2{
+            height: 340px;
+            max-width: 100%;
+            position: sticky;
+            margin:70px 40px;
+            display: flex;
+            flex-direction: row;
+            overflow:hidden;
+            z-index: -1;
+            
+        }
+        .prev, .next{
+            font-size: 50px;
+            cursor: pointer;
+            position: absolute;
+            top:50%;
+            width: auto;
+            color:gray;
+            z-index: 0;
+            border: none;
+            background-color: none;
+            border-radius: 9px;
+        }
+        .prev{
+            left: 100px;
+   
+        }
+        .next{
+            right:100px;
+        }
+        #navbar2 >div{
+            margin:0 30px;
+        }
+        #bestSeller{
+            margin:70px 40px;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            height: 600px;
+        }
+        #bestSeller > div{
+           
+            margin:10px;
+        }
+        #bestSeller .img{
+            margin:0 30px;
+            height: 70%;
+            cursor: pointer;
+        }
+        #bestSeller .text{
+            margin:30px 30px;
+            height: 30%;
+        }
+        .addToCart h2{
+            text-align: center;
+            letter-spacing: 5px;
+            padding:20px;
+            color:white;
+            border: white;
+           
+        }
+        .lineBar h1{
+            width:90%;
+            border-bottom:5px solid black ;
+            line-height: 0.1em;
+            text-align: center;
+            margin:90px 90px;
+            font-size: 60px;
+            letter-spacing: 20px;
+        }
+        .lineBar span{
+            background-color: white;
+            padding:20px 10px;
+        }
+        .newLaunches{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin:70px 40px;
+        }
+        .newLaunches > div {
+            margin:40px;
+            width: 400px;
+           
+        }
+        .trendingNow{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap:25px;
+            margin: 100px 50px;
+            
+        }
+        .trendingNow > div{
+            width: 300px;
+        }
+        .paymentsPart{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-evenly;
+            
+        }
+        .paymentsPart > div {
+            width: 80px;
+            text-align: center;
+            
+            font-weight: lighter;
+        }
+        .addToCart:hover{
+            background-Color : black;
+            color:white
+        }
+
+        
+        #parent{
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+           overflow-x: scroll;
+           overflow-y: hidden;
+           justify-content: start;
+           align-items: center;
+           height: 47vh;
+           flex-direction: column;
+           margin-top: 100px;
+           margin-left: 57px;
+           margin-right: 57px;
+        }
+        #parent > div{
+        margin:1.5%;
+        /* border: 1px solid black; */
+        width: 15%;
+        
+        }
+        #parent > div >div{
+       
+        
+        background-color:white;
+        color: white;
+        text-align: center;
+        padding: 1%;
+        width: 98%;
+        }
+        #parent > div > div:nth-child(2):hover{
+            background-Color : black;
+            color:white
+        }#parent > div > p:nth-child(2){
+            font-weight: 900;
+
+        }
+        /* #parent > div > div:nth-child(1){
+           width: 200px;
+           height: 200px;
+           border: 1px solid black;
+        } */
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="mainHeader">
+        <div class="inner1">
+            <span class="span">DOWNLOAD APP</span>
+            <span class="span">|</span>
+            <span class="span">SUPPORT</span>
+            <span class="span">|</span>
+            <span class="span">TRACK ORDER</span>
+           
+        </div>
+        <div class="inner2">
+          <div class="inner2_1">
+              <div id="search">
+                  <input type="text" name="mysearch"  placeholder="what are you looking for..." id='search_1'>
+                  <button type="submit" id='search_2' >🔍 </button>
+              </div>
+              <div id="purpleLogo">
+                  <div id="img1">
+  
+                 <img src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg" alt="purple logo" class='a' />
+             
+              </div>
+              <div id="img2">
+                  <img src="https://media6.ppl-media.com/mediafiles/ecomm/promo/1537798844_try-logo-3x.png" alt="" class='a' />   
+              </div>
+              </div>
+              <div id="symbol">
+                  <span class='sym'><a href="Login.html" id="heart">&#9825;</a> </span>
+                  <span class='sym'>&#9786;</span>
+                  <span class='sym'><button onclick="whichcart()" id="cart">C</button></span>
+              </div>
+          </div>
+        </div>
+        <div class="inner3">
+          <div class="inner3_1"  id="inner3_1_1">SHOP CATEGORIES</div>
+          <div class="inner3_1">BRANDS</div>
+          <div class="inner3_1">OFFERS</div>
+          <div class="inner3_1">NEW</div>
+          <div class="inner3_1">SPLURGE</div>
+          
+        </div>
+     </div>
+
+    <div id="navbar1"> <!--sliding images--></div>
+        <button class="prev" >&#10094;</button> 
+        <button class="next" >&#10095;</button>
+
+    <div id="navbar2">
+        <div><img src="https://media6.ppl-media.com/tr:w-400,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632301239_store-widget_luxury.gif" style="height:100%;"></div>
+        <div><img src="https://media6.ppl-media.com/tr:w-400,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632301239_store-widget_hair.gif" style="height:100%;"></div>
+        <div><img src="https://media6.ppl-media.com/tr:w-400,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632331339_store-widget_wellness.gif" style="height:100%;"></div>
+        <div><img src="https://media6.ppl-media.com/tr:w-400,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632216850_store-widget_app.gif" style="height:100%;"></div>
+        <div><img src="https://media6.ppl-media.com/tr:w-400,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632301238_store-widget_skin.gif" style="height:100%;"></div>
+        <div><img src="https://media6.ppl-media.com/tr:w-400,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632301238_store-widget_makeup.gif" style="height:100%;"></div>
+     
+    </div>
+
+    <div class="fixedImage">
+        <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632469304_web_ft.jpg" style="width: 100%;">
+    </div> 
+
+    <div style="position:relative; top:60px; margin:auto 50px;">
+        <h1>BEST SELLERS</h1>
+    </div>
+    
+    <div id="parent"></div>
+
+
+    
+    <div class="lineBar">
+        <h1><span>NEW LAUNCHES</span></h1>
+    </div>
+
+    <div class="newLaunches">
+        <div>
+            <img src="https://media6.ppl-media.com/tr:w-512,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632414849_sequence-01_49.gif" style="width: 100%; cursor: pointer;" >
+        </div>
+        <div>
+            <img src="https://media6.ppl-media.com/tr:w-512,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632414848_sequence-01_50.gif" style="width: 100%; cursor: pointer;" >
+        </div>
+        <div>
+            <img src="https://media6.ppl-media.com/tr:w-512,ar-163-243,c-at_max,f-gif/mediafiles/ecomm/misc/1632414843_sequence-01_52.gif" style="width: 100%; cursor: pointer;">
+        </div>
+    </div>
+         
+        <div id="imgSliding"></div>
+        
+    <br>
+    <br>
+        <div class="lineBar">
+            <h1><span>TRENDING RIGHT NOW!</span></h1>
+        </div>
+
+        <div class="trendingNow">
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843266_dermafique.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632909344_simple-3.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843268_ponds.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843268_klairs.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632980091_dot-key.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632909351_engage-1.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843269_faces-canada.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632909339_the-moms-co.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843271_wellness-store.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843272_mens-grooming-store.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843272_loreal-professional.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843273_matrix.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632909346_neutrogena-2.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632909347_livon-3.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632909341_streax-professional-4.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/tr:w-320,ar-2-3,c-at_max/mediafiles/ecomm/misc/1632843275_vaadi-herbals.jpg" style="width: 100%; cursor: pointer;">
+            </div>
+        </div>
+        <div style="width: 80%;margin-left: 10%;"><img src="https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1620711142_elite-web.png" style="width: 100%;"></div>
+
+        <div class="paymentsPart">
+            <div>
+                <img src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247950_secure-payment.jpg" style="width: 100%; cursor: pointer;">
+                <br> <br>
+                <h3>100% Secure Payments</h3>
+                <br>
+                <p>All major credit & debit cards accepted</p>
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247975_beauty-assistant.jpg" style="width: 100%; cursor: pointer;">
+                <br> <br>
+                <h3>100% Secure Payments</h3>
+                <br>
+                <p>All major credit & debit cards accepted</p>
+            </div>
+            <div>
+                <img src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247997_help-center.jpg" style="width: 100%; cursor: pointer;">
+                <br> <br>
+                <h3>100% Secure Payments</h3>
+                <br>
+                <p>All major credit & debit cards accepted</p>
+            </div>
+        </div>
+
+        <br><br><br><br>
+  <script>
+
+      
+      let images = [
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max,f-gif/mediafiles/ecomm/misc/1632392458_k-beauty-web-bbb.gif",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632469304_web_ft.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632848710_charmis_hoempage_web.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max,f-gif/mediafiles/ecomm/misc/1632826398_gv-web-banner-1298x418-8.gif",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632828289_sb_web-5.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632827430_mac_web-1.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632910191_hair-carnival-header-banner_web-1.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632848355_simple_web.jpg"
+      ];
+
+      
+
+      let container1 = document.getElementById("imgSliding");
+      let img1 = document.createElement("img");
+      img1.src = images[images.length-2];
+      img1.style = "width:100%";
+      container1.append(img1);
+
+
+      let container = document.getElementById("navbar1");
+      let img = document.createElement("img");
+      img.src = images[images.length-1];
+      img.style = "width:100%";
+      container.append(img);
+
+      
+     
+      let prev = document.querySelector(".prev");
+      let next = document.querySelector(".next");
+      let prevCnt = images.length-1;
+      let nextCnt = 0;
+
+      prev.addEventListener("click", function(){
+         container.innerHTML = null; 
+        if(prevCnt===0) {prevCnt =  images.length-1};
+          
+            let img = document.createElement("img");
+            img.src = images[prevCnt];
+            img.style = "width:100%";
+            container.append(img);
+            prevCnt--;
+         
+      });
+
+      next.addEventListener("click", function(){
+          container.innerHTML = null;
+          if(nextCnt ==images.length) {nextCnt = 0};
+          
+              let img = document.createElement("img");
+              container.append(img);
+              img.src = images[nextCnt];
+              img.style = "width:100%";
+              nextCnt++;
+          
+      });
+
+      function slideshow(){
+          let cnt = 0;
+          let interval = setInterval(function(){
+            container.innerHTML = null;
+            if(cnt==images.length) cnt = 0;
+            let img = document.createElement("img");
+            
+            img.src = images[cnt++];
+            container.append(img);
+            img.style = "width:100%";
+          }, 3000);
+      }
+      slideshow();
+
+
+
+
+      let Data=[
+     {
+         id:'1',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/98857/biotique-bio-cucumber-pore-tightning-freshner-with-himalayan-waters-for-normal-to-skin-120-ml_1_display_1544606887_35636d5b.jpg',
+         text:'Biotique Bio Cucumber Pore tightening Toner with himalaya',
+         price:'203'
+     },
+     {
+        id:'2',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/220930/good-vibes-radiant-glow-face-serum-rose-hip-10-ml-1-20_8_display_1622784171_bdb3f270.jpg',
+         text:'Good Vibes Roseship Radiant Glow Face Serum',
+         price:'83'
+     },
+     {
+        id:'3',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/238831/ny-bae-kohl-black-the-big-apple-of-my-eye-17_5_display_1630922093_0c0d0607.jpg',
+         text:'NY Bae The Big Apple of My Eye Kohl stick',
+         price:'115'
+
+     },
+     {
+        id:'4',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/249728/good-vibes-brightening-face-wash-papaya-120-ml_6_display_1620453029_e89fdd73.jpg',
+         text:'Good Vibes Green Tea Glow Toner',
+         price:'216'
+
+     },
+     {
+        id:'5',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/252402/maybelline-new-york-fit-me-12hr-oil-control-compact-shade-220-8-g_1_display_1612766020_ad6f0df3.jpg',
+         text:'Good Vibes Roseship Radiant Glow Face Serum',
+         price:'293'
+     },
+     {
+        id:'6',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/165202/lotus-herbals-whiteglow-skin-whitening-brightening-gel-creame-spf-25-20-g-62_2_display_1548134845_ba774678.jpg',
+         text:'Lotus Herbal White Glow-skin',
+         price:'185'
+
+     },
+
+
+     {
+        id:'7',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/98857/biotique-bio-cucumber-pore-tightning-freshner-with-himalayan-waters-for-normal-to-skin-120-ml_1_display_1544606887_35636d5b.jpg',
+         text:'Biotique Bio Cucumber Pore tightening Toner with himalaya',
+         price:'203'
+     },
+     {
+        id:'8',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/220930/good-vibes-radiant-glow-face-serum-rose-hip-10-ml-1-20_8_display_1622784171_bdb3f270.jpg',
+         text:'Good Vibes Roseship Radiant Glow Face Serum',
+         price:'83'
+     },
+     {
+        id:'9',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/238831/ny-bae-kohl-black-the-big-apple-of-my-eye-17_5_display_1630922093_0c0d0607.jpg',
+         text:'NY Bae The Big Apple of My Eye Kohl stick',
+         price:'115'
+
+     },
+     {
+        id:'10',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/249728/good-vibes-brightening-face-wash-papaya-120-ml_6_display_1620453029_e89fdd73.jpg',
+         text:'Good Vibes Green Tea Glow Toner',
+         price:'216'
+
+     },
+     {
+        id:'11',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/252402/maybelline-new-york-fit-me-12hr-oil-control-compact-shade-220-8-g_1_display_1612766020_ad6f0df3.jpg',
+         text:'Good Vibes Roseship Radiant Glow Face Serum',
+         price:'293'
+     },
+     {
+        id:'12',
+         img:'https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/165202/lotus-herbals-whiteglow-skin-whitening-brightening-gel-creame-spf-25-20-g-62_2_display_1548134845_ba774678.jpg',
+         text:'Lotus Herbal White Glow-skin',
+         price:'185'
+
+     },
+ 
+ ]
+      let parent = document.getElementById("parent");
+
+      function showProduct(d){
+
+        parent.innerHTML = null
+
+      Data.forEach(function(product){
+     /*  console.log(product.name)*/
+
+         let div =document.createElement('div')
+         
+         let div1=document.createElement('div')
+          let img =document.createElement('img');
+
+            img.src = product.img;
+            img.style.width = '100%'
+
+            
+
+            let addTocart_btn =  document.createElement('div')
+
+           addTocart_btn.innerText ='Add to Cart';
+          
+         let text =document.createElement('p')
+
+         
+ addTocart_btn.onclick =function(){
+     addTocart(product)
+ };
+
+
+ text.textContent = product.text;
+
+ let price =document.createElement('p')
+
+ price.textContent = 'Rs '+product.price;
+ 
+ div1.append(img)
+
+ div.append(div1,addTocart_btn,text,price) //HTML element
+
+
+ parent.append(div)
+});
+
+}
+
+showProduct()
+
+//check if cart exist in local storage
+//let arr=[{name:'messi'},{name:'ronaldo'}]
+if(localStorage.getItem('projectcart') === null){
+
+  localStorage.setItem('projectcart', JSON.stringify([]));
+}
+
+// p-> [{id:1,data:data},{id:2,data:data},{}3]
+//const newArr = arr.filter((el)=>id!==el.id)
+//oldArr = newArr;
+
+function addTocart(p){  
+//console.log('p:',p)
+
+let product_cart = JSON.parse(localStorage.getItem('projectcart'))
+
+product_cart.push(p)
+
+localStorage.setItem('projectcart',JSON.stringify(product_cart))
+
+//console.log('product_cart',product_cart)
+}
+
+// let  cart_btn =document.getElementById('cart')
+// cart_btn.addEventListener('click',whichcart)
+
+function whichcart(){
+
+    let product_cart = JSON.parse(localStorage.getItem('projectcart'))
+   // console.log(product_cart.length)
+    if(product_cart.length === 0){
+
+       window.location.href= 'cart.html'
+
+    }else if(product_cart.length > 0){
+
+        window.location.href = 'cart2.html'
+    }
+}
+  </script>
+    
+</body>
+</html>
