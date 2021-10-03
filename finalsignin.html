@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+            box-sizing: inherit;
+        }
+.main{
+
+    margin: auto ;
+    margin-top: 100px;
+    width: 420px;
+    height: 540px;
+  /*  border: 1px solid black;*/
+    display: block ;
+    padding: 30px;
+    box-shadow: 0 20px 20px 0  rgba(0,0,0, .4);
+}
+/*.containt{
+    border: 1px solid black;
+    
+}*/
+.box1{
+   /* border: 1px solid black;*/
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.box2{
+  /*  border: 1px solid black;*/
+    margin-top: 40px;
+}
+.input{
+    width:98%;
+    font-size: 18px;
+    margin-bottom: 40px;
+    outline: none;
+    border: white;
+}
+.font{
+    font-size: 18px;
+    margin-right: 20px;
+}
+.box3{
+    border: 1px solid #E40B81;
+    color: white;
+    background-color:#E40B81 ;
+    text-align: center;
+    padding: 3%;
+    box-shadow: 0 2px 2px 0  rgba(0,0,0, .4);
+    margin-top: 40px;
+}
+.box4{
+    text-align: center;
+    color: #E40B81;
+    padding: 3%;
+}
+#SUBMIT:hover{
+    box-shadow: 0 5px 10px 0  rgba(0,0,0, .4);
+}
+.rbtn{
+    color:#E40B81 ;
+}
+#linkh{
+color:white;
+text-decoration-line: none;
+}
+
+#linksignin{
+color:#E40B81 ;
+text-decoration-line: none;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+     <div class="containt">
+            <h1 class="box1">Welcome Aboard</h1>
+            <h3 class="box1" id="box1_2">Let's know you the better and make sure that you never lose access to your account.</h3>
+        <div class="box2" >
+            <form id='main' onsubmit="form(event)" action="">
+                 
+                <input type="text" id="name" placeholder="Enter your name" class="input"/>
+               
+                
+                <input type="number" id="email" placeholder="Enter Email"  class="input"/>
+               
+               
+                <input type="password" id="img"  placeholder="Create new password"  class="input"/>
+               
+                <input type="password" id="img"  placeholder="Type new passord again"  class="input"/>
+
+                <input type="radio" value="male"  name="gender"  class="rbtn"/><lable class="font input">Male</lable>
+
+                <input type="radio" value="female"  name="gender"  class="rbtn"/><lable class="font input">Female</lable>
+
+            </form>
+            <div class="box3" id='SUBMIT'><a href="main.html" id="linkh">SUBMIT</a></div>
+            <div class="box4"><a href="Login.html" id="linksignin">⬅ Back to Login</a></div>
+        </div>
+     </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
