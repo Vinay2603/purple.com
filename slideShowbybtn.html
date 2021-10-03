@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow</title>
+    <style>
+      #mySlidshow{
+        position: relative;
+        z-index: 1;
+      }
+        img{
+            width: 100%;
+            height: 700px;
+
+        }
+        #btn1{
+          width:70px;
+          height:50px;
+          position: relative;
+           top:100px;
+           left:1200px;
+           z-index: 2;
+        }
+        #btn2{
+          width:70px;
+          height:100px;
+          position: relative;
+           top:50%;
+           left:200px;
+           z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <h1>slideshow</h1>
+    <button id="btn2">〈</button>
+    <button id="btn1">〉</button>
+    <div id='mySlidshow'> </div>
+    <script>
+
+let images = [
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max,f-gif/mediafiles/ecomm/misc/1632392458_k-beauty-web-bbb.gif",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632469304_web_ft.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632848710_charmis_hoempage_web.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max,f-gif/mediafiles/ecomm/misc/1632826398_gv-web-banner-1298x418-8.gif",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632828289_sb_web-5.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632827430_mac_web-1.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632910191_hair-carnival-header-banner_web-1.jpg",
+          "https://media6.ppl-media.com/tr:w-1280,c-at_max/mediafiles/ecomm/misc/1632848355_simple_web.jpg"
+      ];
+
+    
+
+
+    let container =document.getElementById('mySlidshow')
+   let prev = document.querySelector('#btn1')
+    let next = document.querySelector('#btn2')
+
+    let img = document.createElement("img");
+      img.src = images[images.length-1];
+      img.style = "width:100%";
+      container.append(img);
+
+    let counter =0
+    prev.addEventListener('click',function(){
+      
+      container.innerHTML =null
+
+      if(counter === images.length){
+        counter =0  ///reset the conter
+        }
+        let img =document.createElement('img')
+       img.src = images[counter]
+       container.append(img)
+       counter =counter +1
+    })
+   
+    next.addEventListener('click',function(){
+      
+      container.innerHTML =null
+
+      if(counter === 0){
+        counter = images.length-1  ///reset the conter
+        }
+        let img =document.createElement('img')
+       img.src = images[counter]
+       container.append(img)
+       counter =counter - 1
+    })
+
+
+ 
+      // let prev = document.querySelector("#btn2");
+      // let next = document.querySelector("#btn1");
+      // let prevCnt = images.length-1;
+      // let nextCnt = 0;
+
+      // prev.addEventListener("click", function(){
+      //    container.innerHTML = null; 
+      //   if(prevCnt===0) prevCnt =  images.length-1;
+          
+      //       let img = document.createElement("img");
+      //       img.src = images[prevCnt];
+      //       img.style = "width:100%";
+      //       container.append(img);
+      //       prevCnt--;
+         
+      // });
+
+      // next.addEventListener("click", function(){
+      //     container.innerHTML = null;
+      //     if(nextCnt ==images.length) nextCnt = 0;
+          
+      //         let img = document.createElement("img");
+      //         container.append(img);
+      //         img.src = images[nextCnt];
+      //         img.style = "width:100%";
+      //         nextCnt++;
+          
+      // }); 
+
+    function startSlideshow(){
+    // let interval;
+ //1.
+       let counter =0
+       let interval =setInterval(function(){
+       container.innerHTML =null
+
+      if(counter === images.length){
+        counter =0  ///reset the conter
+        }
+       let img =document.createElement('img')
+       img.src = images[counter]
+       container.append(img)
+
+       counter =counter +1
+         },3000)
+    }
+     startSlideshow()
+    </script>
+</body>
+</html>
