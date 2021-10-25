@@ -1,0 +1,71 @@
+*{
+    box-sizing: inherit;
+   /* background-color: #E0E0E0;*/
+          }
+  .main{
+  
+  margin: auto ;
+  margin-top: 100px;
+  width: 420px;
+  height: 330px;
+  border: 1px solid white;
+  display: block ;
+  padding: 30px;
+  box-shadow: 0 20px 20px 0  rgba(0,0,0, .4);
+  }
+  .containt{
+      border: 1px solid white;
+  }
+  #x{
+      width: 98%;
+      min-height: 40px;
+      outline:none;
+      border:white;
+     font-size: 20px;
+  }
+  .box1{
+      border: 1px solid white;
+      margin-top: 0px;
+      margin-bottom: 20px;
+  }
+  .box2{
+      border: 1px solid white;
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 25px;
+  }
+  .box2_1{
+      color:#E40B81 ;
+      border: 1px solid white;
+      padding: 1px;
+      margin-left: 0px;
+  }
+  .box3{
+      border: 1px solid #E40B81;
+      color: white;
+      background-color:#E40B81 ;
+      text-align: center;
+      padding: 3%;
+      box-shadow: 0 2px 2px 0  rgba(0,0,0, .4);
+  }
+  .box4{
+      text-align: center;
+      color: #E40B81;
+      padding: 3%;
+  }
+  #SUBMIT:hover{
+      box-shadow: 0 5px 10px 0  rgba(0,0,0, .4);
+  }
+  #linkfsignin{
+      color:white;
+  text-decoration-line: none; 
+  }
+  #linklogin{
+      color:#E40B81;
+  text-decoration-line: none; 
+  }
+  .nocolor{
+      background-color: white;
+      border: white;
+      color: #E40B81;
+  }
