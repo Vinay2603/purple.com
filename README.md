@@ -42,8 +42,7 @@ whenever any product is added to the cart, the Cart page display no. of products
 
 ![landing page](https://github.com/Vinay2603/purple.com/blob/main/img/cart_with_product.png  "Logo Title Text 1")
 
-## For accessing the project
----
+
 ## For accessing the project
 ---
 Download the project repo and open the Index.html file in the browser or you can directly:-
