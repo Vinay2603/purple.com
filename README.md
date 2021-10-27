@@ -27,7 +27,7 @@ We have designed the carousel functionality of products using javascript as assi
 After the successful completion of the signup, your email, username and password is stored in the local storage and you can log in with that credentials, if the email ID and password are incorrect it will fail the validation and you cannot log in to the website.
 
 
-![landing page](https://github.com/Vinay2603/purple.com/blob/main/img/login_page.png  "Logo Title Text 1")
+![landing page](https://github.com/Vinay2603/purple.com/blob/main/img/signin.png  "Logo Title Text 1")
 
 ## Cart  without any product
 ----
