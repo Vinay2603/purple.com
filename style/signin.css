@@ -6,7 +6,7 @@
 margin: auto ;
 margin-top: 100px;
 width: 420px;
-height: 540px;
+height: 370px;
 /*  border: 1px solid black;*/
 display: block ;
 padding: 30px;
@@ -54,13 +54,7 @@ padding: 3%;
 #SUBMIT:hover{
 box-shadow: 0 5px 10px 0  rgba(0,0,0, .4);
 }
-.rbtn{
-color:#E40B81 ;
-}
-#linkh{
-color:white;
-text-decoration-line: none;
-}
+
 
 #linksignin{
 color:#E40B81 ;
