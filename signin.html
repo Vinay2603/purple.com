@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="/style/signin.css">
+    <title>Purplle Diwali Sale | Utpo 50% Off + Free Gift on Every Orders*</title>
+
+</head>
+<body>
+    <div class="main">
+     <div class="containt">
+            <h1 class="box1">Sign in </h1>
+            <h3 class="box1" id="box1_2">Let's get back to your account.</h3>
+        <div class="box2" >
+            <form id='main' onsubmit="formq(event)" action="">
+                 
+               
+               
+                
+                <input type="email" id="email" placeholder="Enter Email"  class="input"/>
+               
+               
+                <input type="password" id="password"  placeholder="Enter password"  class="input"/>
+               
+                <br/>
+                <input type="submit" class="box3" id='SUBMIT' >
+            </form>
+          
+            <div class="box4"><a href="main.html" id="linksignin">⬅ Back to Main Page</a></div>
+        </div>
+     </div>
+    </div>
+    <script >
+function formq(e){
+    e.preventDefault()
+
+    let form =document.getElementById('main')
+
+ 
+
+    let emailid =form.email.value
+     
+    let passwordid =form.password.value
+
+    let arr= JSON.parse(localStorage.getItem('Purplle_backdata'))
+
+    var lastvalue =arr[ arr.length -1] 
+
+    if(emailid == lastvalue.email  && passwordid == lastvalue.password ){
+
+          alert(`Sign in successfull...`)
+
+    }else if(emailid != lastvalue.email  || passwordid != lastvalue.password){
+
+        alert(`Invalid Credentials`)
+    }
+}
+    </script>
+</body>
+</html>
