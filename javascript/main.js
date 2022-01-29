@@ -158,7 +158,7 @@
 ]
     let parent = document.getElementById("parent");
 
-    function showProduct(d){
+    function showProduct(){
 
       parent.innerHTML = null
 
